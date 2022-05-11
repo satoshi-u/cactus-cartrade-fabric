@@ -1,0 +1,26 @@
+cartradeInfo:
+  fabric:
+    validatorID: r9IS4dDf
+    mspID: Org1MSP
+    keystore: "/etc/cactus/fabric/wallet"
+    connUserName: appUser
+    contractName: fabcar
+    peers:
+      -
+        name: peer0.org1.example.com
+        requests: grpc://localhost:7051
+        orderer:
+          name: orderer.example.com
+          URL: grpc://localhost:7050
+
+    ca:
+      name: ca.example.com
+      URL: http://localhost:7054
+
+    submitter:
+      name: admin
+
+    channelName: mychannel
+    chaincodeID: fabcar
+
+logLevel: debug

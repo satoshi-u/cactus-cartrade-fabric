@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src/main/typescript",
+    "composite": true,
+    "outDir": "./dist",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "tsBuildInfoFile": "../../.build-cache/cactus-plugin-ledger-connector-go-ethereum-socketio.tsbuildinfo",
+    "strict": false // TODO - True, fix warnings
+  },
+  "include": [
+    "./src/main/typescript/common/core/*.ts",
+    "./src/main/typescript/common/core/bin/*.ts",
+    "./src/main/typescript/common/core/config/*.ts",
+    "./src/main/typescript/connector/*.ts"
+  ]
+}

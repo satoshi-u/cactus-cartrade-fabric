@@ -1,0 +1,27 @@
+blpRegistry:
+  -
+    businessLogicID: guks32pf
+    validatorID: [r9IS4dDf]
+
+logLevel: debug
+
+applicationHostInfo:
+  hostName: http://localhost # please change hostName to your IP address
+  hostPort: 5034
+
+socketOptions:
+  rejectUnauthorized: false
+  reconnection: false
+  timeout: 20000
+
+verifier:
+  maxCounterRequestID: 100
+  syncFunctionTimeoutMillisecond: 5000
+
+appRouters:
+  -
+    path: /api/v1/bl/trades/
+    routerJs: /root/cactus/dist/trades.js
+  -
+    path: /api/v1/bl/cars/
+    routerJs: /root/cactus/dist/cars.js

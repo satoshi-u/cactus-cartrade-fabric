@@ -1,0 +1,45 @@
+ledgerPluginInfo:
+  -
+    validatorID: r9IS4dDf
+    validatorType: socketio
+    validatorURL: https://fabric-socketio-validator:5040
+    validatorKeyPath: ./validatorKey/r9IS4dDf/keyr9IS4dDf.crt
+    ledgerInfo:
+       ledgerAbstract: Fabric Ledger
+    apiInfo:
+      -
+        apiType: changeCarOwner
+        requestedData:
+          -
+            dataName: carId
+            dataType: string
+          -
+            dataName: newOwner
+            dataType: string
+      -
+        apiType: sendSignedProposal
+        requestedData:
+          -
+            dataName: signedCommitProposal
+            dataType: string
+          -
+            dataName: commitReq
+            dataType: string
+
+signTxInfo:
+  fabric:
+    mspID: Org1MSP
+    peers:
+      -
+        name: peer0.org1.example.com
+        requests: grpc://localhost:7051
+    orderer:
+      URL: grpc://localhost:7050
+    ca:
+      name: ca.example.com
+      URL: http://localhost:7054
+    submitter:
+      name: admin
+      secret: adminpw
+    channelName: mychannel
+    chaincodeID: fabcar
